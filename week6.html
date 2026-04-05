@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Continuing Development - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/ojt-blog.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="ojt-blog.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 6: Continuing POS Development</h1>
+                <p class="post-date">March 30-31 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">4 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Polishing the POS Features</h2>
+                <p>
+                    This short week focused on refining the POS system. On Monday (March 30th), I made the order status filter work so kitchen staff can see orders organized by their status. On Tuesday (March 31st), I connected the tables to the Order model so the system knows which table each order came from, then fixed hover issues in the filter to make it feel smooth.
+                </p>
+
+                <h2>Making It Better and Flexible</h2>
+                <p>
+                    I also removed the 'w/' abbreviation from all product names based on the owner's feedback. More importantly, I changed the room filter from being hard-coded to dynamic – meaning new rooms can be added from the database without changing the code. This makes the system flexible for when the restaurant grows.
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 6</h2>
+                <ul>
+                    <li>Making filters that help organize information</li>
+                    <li>Connecting database relationships properly</li>
+                    <li>Making code flexible for future growth</li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 6 Reflection</h2>
+                <p>
+                    Even though this was a short week, I made meaningful improvements to the POS system. Refining features and making the code flexible showed me that good software is built with both current needs and future growth in mind.
+                </p>
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/ojt-blog.js"></script>
+</body>
+</html>

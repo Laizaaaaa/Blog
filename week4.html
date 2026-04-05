@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4: Refining Features - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/ojt-blog.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="ojt-blog.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 4: Refining Features</h1>
+                <p class="post-date">March 15-21 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">7 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Fixing Data Issues in the System</h2>
+                <p>
+                    Week four started with finding and fixing problems with the data. On Monday (March 16th), I noticed
+                    that the product categories were jumbled because of changes in the category seeder. I fixed the
+                    product seeder to match the new category structure. I also changed the timezone settings in the app
+                    to match our location, and made the customer name field optional since not all orders need a
+                    customer name.
+                </p>
+
+                <h2>Improving the System Features</h2>
+                <p>
+                    On Monday, I also moved some order-related functions to a new controller file to make the code
+                    easier to read and understand. Controllers help organize code by grouping related functions
+                    together. Some of these functions still had default values that would later be replaced with real
+                    data from users.
+                </p>
+
+                <h2>Working on User Interface and Authentication</h2>
+                <p>
+                    On Tuesday (March 17th), I fixed the error message system so that when someone enters the wrong PIN,
+                    the error shows up in the PIN popup instead of on the page. I also created seeders for user roles,
+                    accounts, and users so we could test the system properly. I fixed an issue with the search feature
+                    where the cursor would disappear after showing results. Instead of using JavaScript code on the
+                    webpage to filter categories, I switched to using the server (the backend) to do the filtering,
+                    which works better.
+                </p>
+
+                <h2>Adding Customer Features</h2>
+                <p>
+                    On Wednesday (March 18th), I added a feature that suggests customer names when you're filling out an
+                    order. I also fixed some bugs that came up while testing. The team got together to discuss how the
+                    project was going and gave some suggestions on small changes to improve things.
+                </p>
+
+                <h2>Fixing and Documenting the Code</h2>
+                <p>
+                    On Thursday (March 19th), I fixed the MenuController and added comments throughout the code to
+                    explain what each part does.
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 4</h2>
+                <ul>
+                    <li>How to find and fix problems with data in the database</li>
+                    <li>Organizing code into separate files makes it easier to work with</li>
+                    <li>Making small features like error messages work better improves the user experience</li>
+                    <li>Using comments in code helps others understand what the code does</li>
+                    <li>Sometimes the server can do work better than the webpage</li>
+                    <li>Testing features before they're finished helps find problems early</li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 4 Reflection</h2>
+                <p>
+                    This week was about making the system work better and making the code cleaner. I fixed real problems
+                    that were making the system confusing, and I organized the code in a way that makes it easier to
+                    keep working on. By the end of the week, the POS system was starting to look and work like a real
+                    product that the staff could use.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/ojt-blog.js"></script>
+</body>
+
+</html>

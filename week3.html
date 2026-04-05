@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3: Development Setup - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/ojt-blog.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="ojt-blog.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 3: Development Setup</h1>
+                <p class="post-date">March 8-14 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">6 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Starting Development on Cynthia Curry POS</h2>
+                <p>
+                    Week three was the start of the real development work on the Cynthia Curry POS system. On Monday
+                    (March 9th), our team kicked off with Gwyn setting up the Laravel project and creating the GitHub
+                    repository for version control. While Gwyn and Grace started working on the UI/front-end, I reviewed
+                    the database table structures and made some adjustments based on our design discussions.
+                </p>
+
+                <h2>Creating the Database Seeders</h2>
+                <p>
+                    On Tuesday (March 10th), I drafted seeders for the Products, Categories, and Sub-categories tables.
+                    These seeders would help us populate the database with initial data from the original CCPOS system.
+                    This was important for testing and making sure our new system had all the products ready to go.
+                </p>
+
+                <h2>Migrations and Data Organization</h2>
+                <p>
+                    On Wednesday (March 11th), I created migrations for the Products, Categories, and Sub-categories
+                    tables. As our team reviewed the database again, we made some changes to the table structure to make
+                    them better. I then finalized the product seeder and organized all the products by category – this
+                    was different from the original system where products were mixed together, making it easier to
+                    update them later if needed. I also copied all the product images from the original CCPOS files to
+                    our Laravel project and uploaded them to GitHub so everyone could access them.
+                </p>
+
+                <h2>Working on the Menu Search Feature</h2>
+                <p>
+                    On Thursday (March 12th), I worked on making the search feature in the menu work properly. I found
+                    and fixed some bugs in the search feature and added a "no results found" message so users would know
+                    if their search didn't find anything.
+                </p>
+
+                <h2>Fixing Final Issues</h2>
+                <p>
+                    On Friday (March 13th), I spent the day fixing remaining problems. I renamed some migration files so
+                    they would run in the right order when setting up the database. I also fixed the payment details
+                    calculation based on how the staff had calculated it in the original system to make sure everything
+                    was accurate.
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 3</h2>
+                <ul>
+                    <li>How to set up and organize a Laravel project properly</li>
+                    <li>Creating database seeders to populate test data</li>
+                    <li>Working with database migrations and making changes when needed</li>
+                    <li>Organizing data in a way that makes it easy to update later</li>
+                    <li>Building features like search that users need</li>
+                    <li>Fixing bugs and making sure calculations are correct</li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 3 Reflection</h2>
+                <p>
+                    This week felt good because I was building real parts of the system that people would use. Setting
+                    up the database, organizing the data, and making features like search work taught me a lot. I was
+                    working on actual code that mattered, not just practice exercises. By the end of the week, the
+                    foundation of the system was in place and we were ready to continue building more features.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/ojt-blog.js"></script>
+</body>
+
+</html>

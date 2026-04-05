@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5: POS Halt & New Project - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/ojt-blog.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="ojt-blog.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 5: POS Halt & New Project</h1>
+                <p class="post-date">March 22-28 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">8 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Finishing POS Features & Introducing a New Project</h2>
+                <p>
+                    On Monday (March 23), I continued with POS development. I created a migration to add a quantity field to the order_items table and updated the OrderItem model to include quantity as a fillable attribute. I also created the Kitchen Controller and started building the backend code for the kitchen orders page, which would allow the kitchen staff to see what orders they need to prepare.
+                </p>
+                <p>
+                    In the afternoon, we had a Google Meet with our mentor where he introduced us to a new mini project: an Ordinance System, a website for SB Manito. He discussed what features each user role would need and what they would be able to see. Our team gave suggestions to improve the design based on the concept he presented.
+                </p>
+
+                <h2>Presenting Work & Pausing Development</h2>
+                <p>
+                    On Tuesday morning (March 24), we presented our POS development progress to Sir George and Sir James. During the presentation, Sir George suggested some revisions to the UI design, particularly for handling franchise features when the restaurant expands to multiple locations.
+                </p>
+                <p>
+                    In the afternoon, I continued with some POS development work. I created a migration to add new status options to the order status: 'new' and 'to pay'. I also fixed the order status so that when a waiter confirms an order, it changes to 'new' instead of 'preparing', which helps track the flow of orders more accurately.
+                </p>
+                <p>
+                    After reviewing the presentation feedback with our mentor, he decided that we should halt the POS development while he talks directly with the owner about the requirements and design revisions. He told us that we could start working on redesigning the Ordinance System while waiting for his update.
+                </p>
+
+                <h2>Building the Ordinance System Design</h2>
+                <p>
+                    On Wednesday (March 25), we continued to design the Ordinance System, building on the feedback and ideas from our initial discussion with our mentor.
+                </p>
+                <p>
+                    On Thursday (March 26), I conducted research by gathering official logos and pictures from the SB Manito Facebook page. I processed these assets in Canva to remove backgrounds for a cleaner design integration in Figma. I established the website structure by drafting the primary navigation bar and banner placeholders. I also drafted the initial layout for the Proposed Ordinances page and the detailed ordinance information view.
+                </p>
+                <p>
+                    On Friday (March 27), I drafted the Regular Sessions page using real-time data and references from official social media posts. I developed a dedicated overlay interface for viewing PDF text versions without leaving the main page. I also designed the News page layout using actual announcements as placeholder content to keep it realistic. I refined the visual hierarchy and layout across the Ordinance and News sections for better readability.
+                </p>
+                <p>
+                    Over the weekend (March 28), I added a Sessions Archive page and an integrated announcement feature for upcoming session alerts. I conducted a polishing phase to fix alignment, spacing, and consistency issues across all designed pages. Then I transitioned from static designs to a functional prototype by connecting interactive flows in Figma. I tested the prototype flow to ensure smooth transitions between all the pages.
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 5</h2>
+                <ul>
+                    <li>Understanding when to pause development for better planning</li>
+                    <li>How stakeholder feedback can change project direction</li>
+                    <li>Consulting with mentors on important decisions</li>
+                    <li>Starting fresh design work while previous work is paused</li>
+                    <li>Gathering and preparing design assets from real sources</li>
+                    <li>Designing for different types of users and what they need to see</li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 5 Reflection</h2>
+                <p>
+                    This week showed me how important it is to be flexible when working in real-world projects. I started the week finishing some POS features and learning about the Ordinance System project from my mentor. But by Tuesday, after the presentation feedback and my mentor's decision to pause POS development, I shifted completely to working on the Ordinance System design. Instead of feeling frustrated about pausing the POS work, I realized that sometimes stepping back and waiting for clear direction is the right thing to do. This week also taught me a lot about design work—from gathering real assets to creating interactive prototypes in Figma. I learned that good design takes time and many steps, from research and gathering materials, to drafting layouts, to polishing all the details, to finally making it interactive. Being able to switch between different types of work (development on Monday, then design for the rest of the week) made me realize how adaptable I need to be as a programmer.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/ojt-blog.js"></script>
+</body>
+
+</html>

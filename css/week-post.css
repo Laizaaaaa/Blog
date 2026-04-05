@@ -1,0 +1,135 @@
+/* Week Post Page Styles */
+
+.post-nav {
+    max-width: 80%;
+    margin: -2rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.back-button:hover {
+    color: var(--secondary-color);
+    transform: translateX(-5px);
+}
+
+.section-separator {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2.5rem 0;
+}
+
+.post-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.full-post {
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem;
+}
+
+.full-post .post-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 2rem;
+}
+
+.full-post .post-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.full-post .post-date {
+    color: var(--text-gray);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.read-time {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.post-body {
+    color: var(--text-light);
+    line-height: 1.9;
+}
+
+.post-body h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--text-gray);
+}
+
+.post-body h2:first-of-type {
+    margin-top: 0;
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+    color: var(--text-gray);
+    font-size: 1.05rem;
+}
+
+.post-body ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.post-body li {
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-gray);
+    font-size: 1.05rem;
+}
+
+.post-body li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsive Design for Post Pages */
+@media (max-width: 768px) {
+    .full-post {
+        padding: 2rem 1.5rem;
+    }
+
+    .full-post .post-title {
+        font-size: 1.8rem;
+    }
+
+    .post-body h2 {
+        font-size: 1.4rem;
+    }
+
+    .post-container {
+        padding: 0 1rem 2rem;
+    }
+}
