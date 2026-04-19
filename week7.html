@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7: Tablet Optimization & Cashier Features - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="index.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 7: Tablet Optimization & Cashier Features</h1>
+                <p class="post-date">April 6-11 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">10 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Bug Fixes and Live Updates</h2>
+                <p>
+                    On Monday (April 6), I fixed several critical bugs including a database field mismatch (fist_name vs
+                    first_name in UserSeeder) and a default sex value being saved when the field no longer existed. I
+                    removed redundant "no orders found" messages and implemented live status indicator updates so order
+                    cards refresh instantly when item status changes without requiring a page reload.
+                </p>
+                <p>
+                    I also fixed an item duplication bug where the code was iterating through all order items instead of
+                    filtering by order type. I grouped items by type in the order details panel, added a white
+                    background to the sticky table header, and made the status badge update live when order items are
+                    marked as "preparing".
+                </p>
+
+                <h2>Unexpected Tablet Deployment</h2>
+                <p>
+                    On Tuesday (April 7), Sir George surprised us by providing Fire 7 tablets (600x1024) that Cynthia
+                    Curry waiters would actually use in production. This forced us to immediately shift to responsive
+                    design after we had been focused on laptop screen sizes. We used one teammate's laptop as a
+                    temporary server to test our currently developed system on the actual tablets. The smaller
+                    resolution meant we had to reorganize layouts, resize buttons for easier touch interaction, and
+                    carefully manage information density to avoid overwhelming the screen. Many UI elements that worked
+                    fine on a laptop felt cramped on the tablet, requiring us to prioritize what information should be
+                    visible at each step.
+                </p>
+                <p>
+                    In the afternoon, I used my own laptop to test my changes and see
+                    how they would look and function on the tablet. I added color-coded table numbers for each room and
+                    an "All Rooms" filter
+                    option as suggested by teammates. I implemented live updates on the kitchen orders page using
+                    polling (every 2 seconds) after
+                    WebSocket attempts failed. I also fixed the PIN modal to accept only numeric input and allowed users
+                    to press Enter to submit instead of clicking confirm.
+                </p>
+
+                <h2>Cashier Features and Spice Level</h2>
+                <p>
+                    On Wednesday (April 8), our mentor showed us another system to evaluate. We did a quality assurance
+                    test on the system given to us, found several things that could be better, and reviewed the source
+                    code to understand best practices. After completing the QA review, we went back to developing the
+                    POS.
+                    I began building the cashier's orders page, testing it on the actual target device to ensure it fit properly.
+                </p>
+                <p>
+                    Thursday (April 9) focused on refining the UI to match the billout page style, and in the afternoon, I copied
+                    and adapted the kitchen orders logic for the cashier's needs.
+                </p>
+                <p>
+                    On Friday (April 10), I added a nullable <code>spice_level</code> column to the order_items table
+                    (for curry items only) and modified the Order Controller to save and display this data. I
+                    implemented the cancel/void feature with a success modal and added 2-second polling to auto-refresh
+                    the orders page.
+                </p>
+
+                <h2>Payment Processing</h2>
+                <p>
+                    On Saturday (April 11), I implemented the billout page backend with dynamic database-driven
+                    information. I disabled the numpad until the cash button is clicked, disabled GCash when cash is
+                    selected, and implemented discount functionality for both whole orders and individual items.
+                </p>
+                <p>
+                    The system now automatically calculates change when cash is entered. I created migrations and models
+                    to persist billout data and fixed several bugs to polish the feature.
+                </p>
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 7</h2>
+                <ul>
+                    <li>Responsive design is critical when deploying to multiple device types with different screen
+                        sizes</li>
+                    <li>Data synchronization between multiple client interfaces requires thoughtful planning and
+                        implementation</li>
+                    <li>Polling can be a practical short-term solution for real-time updates, though WebSockets are more
+                        efficient long-term</li>
+                    <li>Consistent UI/UX across related pages improves usability and user familiarity</li>
+                    <li>Understanding end-user requirements early prevents rework and ensures better product-market fit
+                    </li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 7 Reflection</h2>
+                <p>
+                    This was an intense week filled with unexpected changes and learnings. The surprise tablet
+                    deployment forced us to pivot our design approach, teaching me the importance of gathering complete
+                    requirements upfront. I also learned valuable lessons about real-time data synchronization and made
+                    practical tradeoffs between ideal solutions and workable implementations. By week's end, the POS
+                    system was becoming more robust, with major features for the kitchen, orders, and cashier workflows
+                    working well. The team collaboration on UI improvements and the willingness to adapt to changing
+                    requirements demonstrated the importance of agility in software development.
+                </p>
+            </div>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="post-navigation">
+            <a href="week6.html" class="nav-prev">← Week 6</a>
+            <a href="week8.html" class="nav-next">Week 8 →</a>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

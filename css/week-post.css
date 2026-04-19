@@ -115,6 +115,41 @@
     font-weight: bold;
 }
 
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 4rem auto 2rem;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-prev,
+.nav-next {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    color: var(--secondary-color);
+}
+
+.nav-prev:hover {
+    transform: translateX(-5px);
+}
+
+.nav-next:hover {
+    transform: translateX(5px);
+}
+
 /* Responsive Design for Post Pages */
 @media (max-width: 768px) {
     .full-post {

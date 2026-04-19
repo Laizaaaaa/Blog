@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8: Beta Testing & Performance Optimization - OJT Weekly Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/week-post.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">OJT Weekly Blog</h1>
+            <p class="header-subtitle">Pacific Blue Training Journey</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <nav class="post-nav">
+        <a href="index.html" class="back-button">← Back to Blog</a>
+    </nav>
+
+    <!-- Post Content -->
+    <main class="post-container">
+        <article class="full-post">
+            <div class="post-header">
+                <h1 class="post-title">Week 8: Beta Testing & Performance Optimization</h1>
+                <p class="post-date">April 13-17 2026</p>
+                <div class="post-meta">
+                    <span class="read-time">12 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>First On-Site Deployment</h2>
+                <p>
+                    On Monday (April 13), we deployed the POS system to Cynthia Curry for the first time. We spent considerable time adjusting the print layout, paper size, and colors since we hadn't tested printing before. Some screen colors were invisible when printed in black and white, requiring careful adjustments.
+                </p>
+                <p>
+                    We demonstrated the system to restaurant staff and had them test it on tablets and laptops. However, the restaurant's extremely slow internet connection caused pages to load sluggishly and affected the entire user experience. We encountered several bugs during testing, so we postponed beta testing until the next day to identify and fix critical issues.
+                </p>
+
+                <h2>Cloud Images and Dynamic Menu</h2>
+                <p>
+                    On Tuesday (April 14), we continued fixing bugs and shifted our performance strategy. We uploaded all product images to cloud storage and fetched them via direct links instead of serving from the local server. After resolving initial compatibility issues, this significantly reduced data transferred during page loads.
+                </p>
+                <p>
+                    When testing product additions from the admin side, we discovered new products weren't appearing in the menu. Investigation revealed the menu items were hardcoded in the MenuController instead of pulling from the database dynamically. I refactored the MenuController to use dynamic database queries and updated the seeders accordingly.
+                </p>
+
+                <h2>Performance Optimization</h2>
+                <p>
+                    On Wednesday (April 15), we cleaned up the codebase and worked on general performance improvements. We tested on actual devices, but the slow internet connection continued to impact performance significantly.
+                </p>
+                <p>
+                    On Thursday (April 16), we deployed using ngrok, a tunneling service that creates a public URL for local applications. Performance improved dramatically with no significant delays. We demonstrated to a Pacific Blue IT developer and another batch of Cynthia Curry staff, receiving feedback that they wanted PIN confirmation removed and cashier names on receipts instead of server names. Our mentor advised against removing the PIN for accountability reasons. After a few hours, ngrok displayed errors, likely due to free tier limitations.
+                </p>
+
+                <h2>Consultations and Backup Hosting</h2>
+                <p>
+                    On Friday (April 17), we continued fixing bugs and consulted with Sir James and Sir Eric about discount functionality and the admin sales page requirements. While waiting for our mentor to provide Hostinger credentials, we researched alternative web hosting providers as backup options.
+                </p>
+
+                <hr class="section-separator">
+
+                <h2>Key Learnings from Week 8</h2>
+                <ul>
+                    <li>Real-world testing often reveals problems that development environment testing misses (poor internet connectivity, infrastructure constraints)</li>
+                    <li>Cloud-based image hosting can significantly reduce server load and improve page load times compared to local storage</li>
+                    <li>Hardcoding configuration data in controllers reduces flexibility; dynamic database-driven designs are crucial for maintainable systems</li>
+                    <li>Stakeholder feedback from actual users is invaluable for understanding real usability challenges and priorities</li>
+                    <li>Proper hosting infrastructure matters as much as application code for production system performance</li>
+                    <li>PIN-based accountability mechanisms, while sometimes seeming burdensome to users, serve important business purposes</li>
+                </ul>
+
+                <hr class="section-separator">
+
+                <h2>Week 8 Reflection</h2>
+                <p>
+                    This was a humbling week that brought real-world challenges into sharp focus. Moving from a controlled development environment to an actual restaurant with real users and infrastructure constraints exposed gaps we hadn't anticipated. The slow internet connection was frustrating, but it taught us that performance optimization isn't just about code—it's about understanding the entire infrastructure and finding creative solutions like cloud image hosting.
+                </p>
+                <p>
+                    The discovery that the menu was hardcoded reinforced the importance of thinking dynamically from the start. However, the positive feedback from staff and the successful ngrok testing demonstrated that the core system architecture is sound.
+                </p>
+                <p>
+                    Most importantly, this week demonstrated the value of working closely with actual stakeholders. Their feedback about PIN confirmation and receipt naming conventions helped us understand what matters in their daily work. Moving forward, we'll focus on production hosting that provides reliable internet performance and continue refining based on real-world usage patterns.
+                </p>
+            </div>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="post-navigation">
+            <a href="week7.html" class="nav-prev">← Week 7</a>
+            <div class="nav-next"></div>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 OJT Weekly Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
