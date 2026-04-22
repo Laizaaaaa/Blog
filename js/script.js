@@ -6,6 +6,51 @@ let mouseY = 0;
 let followerX = 0;
 let followerY = 0;
 
+const themeStorageKey = 'blog-theme';
+const themeToggleLabel = {
+    dark: 'Dark mode',
+    light: 'Light mode'
+};
+
+function getPreferredTheme() {
+    const savedTheme = localStorage.getItem(themeStorageKey);
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+        return savedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
+function applyTheme(theme) {
+    document.body.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem(themeStorageKey, theme);
+
+    const themeButtons = document.querySelectorAll('.theme-toggle');
+    themeButtons.forEach((button) => {
+        const isLight = theme === 'light';
+        button.setAttribute('aria-pressed', String(isLight));
+        button.setAttribute('aria-label', isLight ? themeToggleLabel.dark : themeToggleLabel.light);
+        button.innerHTML = `<span class="theme-toggle-icon">${isLight ? '☀' : '☾'}</span>`;
+    });
+}
+
+function setupThemeToggle() {
+    if (document.querySelector('.theme-toggle')) {
+        return;
+    }
+
+    const themeToggle = document.createElement('button');
+    themeToggle.type = 'button';
+    themeToggle.className = 'theme-toggle';
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+        applyTheme(nextTheme);
+    });
+
+    document.body.appendChild(themeToggle);
+}
+
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
@@ -31,6 +76,9 @@ document.addEventListener('mouseenter', () => {
     cursor.style.opacity = '1';
     cursorFollower.style.opacity = '1';
 });
+
+setupThemeToggle();
+applyTheme(getPreferredTheme());
 
 // Smooth scroll for any internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -34,7 +34,7 @@
 }
 
 .full-post {
-    background: rgba(30, 41, 59, 0.3);
+    background: var(--surface-soft);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 3rem;
